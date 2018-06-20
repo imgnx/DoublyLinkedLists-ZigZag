@@ -26,6 +26,14 @@ function zigzag(a) {
         console.log("a[right]: ", a[right-0]);
         console.log("-----------------");
 
+        // Still not completely sure what this does
+        // I BELIEVE This checks to see if the previous two elements fit one of the two descriptions:
+        //    1. There are three elements of the same value
+        //    2. There are three elements who are either strictly incrementing or strictly decrementing
+        // If so, then we do not want to move the right pointer to the next element. We simply want to break
+        // out of the inner loop. This could be why we are using a while loop instead of a for loop here.
+        // TODO: ======================================================================================
+        //   - Make sure you understand what the break keyword does here. Step in, log to the console, etc.
         if ((a[right - 1] - a[right - 2]) * (a[right - 1] - a[right]) <= 0) {
           break;
         }
